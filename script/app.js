@@ -11,7 +11,7 @@ const acceptCookies = () => {
 
 const dynamicContent = () => {
   const teasers = document.querySelectorAll('.teaser__text');
-  const marqueeBar = document.querySelector('marquee');
+  const marqueeBar = document.querySelector('.marquee > p');
 
   // mock content delay
   setTimeout(() => marqueeBar.innerHTML = CONTENT_BREAKING_NEWS, 3000);

@@ -1,0 +1,39 @@
+/* generics */
+@import 'generics';
+
+/* variables */
+@import 'variables';
+
+/* main */
+@import 'main';
+
+/* components */
+@import 'components';
+
+/* fonts */
+@import 'fonts';
+
+/* mobile styles */
+@import 'mobile';
+
+body {
+    --slow-css-loaded:1px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.marquee {
+    overflow: hidden;
+
+    p {
+        white-space: nowrap;
+        animation: marquee 20s linear infinite;
+    }
+
+    &:hover p {
+        animation-play-state: paused;
+    }
+}
