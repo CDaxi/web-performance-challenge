@@ -1,4 +1,5 @@
 .teaser__list {
+  width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -33,6 +34,8 @@
 
 .teaser__image {
   order: -1;
+  width: 100%;
+  height: auto;
 }
 
 .teaser__title {
