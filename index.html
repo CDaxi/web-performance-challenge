@@ -46,9 +46,9 @@
 <!--      }, timeout);-->
 <!--    }(window, document, "body {opacity: 0 !important}", 3000));-->
 <!--  </script>-->
-  <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.3.1.min.css">
+<!--  <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.3.1.min.css">-->
   <link rel="stylesheet" type="text/css" href="styles/index.css" />
-  <link rel="stylesheet" type="text/css" href="styles/swiper-8.4.7.min.css"/>
+<!--  <link rel="stylesheet" type="text/css" href="styles/swiper-8.4.7.min.css"/>-->
   <link rel="preload" href="fonts/alegreya-v29-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 <!--  <link rel="preload" href="fonts/alegreya-v29-latin-900.woff2" as="font" type="font/woff2" crossorigin>-->
   <link rel="preload" href="fonts/ArchitectsDaughter-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -83,7 +83,9 @@
 
   <main class="main__base">
     <div class="main__advertising">
-      <div style="width:400px;max-width:100%;"><div style="height:0;padding-bottom:52.4%;position:relative;"><iframe width="500" height="262" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/6wy03z"></iframe></div></div>
+      <div style="width:400px;max-width:100%;">
+        <div style="height:0;padding-bottom:52.4%;position:relative;" class="main__advertisingContainer"></div>
+      </div>
     </div>
 
     <h1 class="main__title visually-hidden" id="page-title">The Rum Diary Homepage</h1>
@@ -96,51 +98,38 @@
       </div>
       
       <section class="main__hero main__section">
-        <div class="hero__carousel div1 carousel carousel--height-100perc">
-          <div class="carousel__viewport">
-            <div class="carousel__slides">
-              <div class="carousel__slide">
-                <picture class="carousel__img height-100perc">
-                  <img
-                    src="assets/slide1.webp"
-                    alt="Person taking a bite of food">
-                </picture>
-              </div>
-              <div class="carousel__slide">
-                <picture class="carousel__img height-100perc">
-                  <img
-                    src="assets/slide2.webp"
-                    loading="lazy"
-                    alt="Person taking a bite of food">
-                </picture>
-              </div>
-              <div class="carousel__slide">
-                <picture class="carousel__img height-100perc">
-                  <img
-                    src="assets/slide3.webp"
-                    loading="lazy"
-                    alt="Person taking a bite of food">
-                </picture>
+        <a class="hero__carousel div1 swiper" href="fake-link.html" aria-label="Local restaurants finally optimising time to first bite">
+          <div class="carousel carousel--height-100perc">
+            <div class="carousel__viewport">
+              <div class="carousel__slides">
+                <div class="carousel__slide">
+                  <picture class="carousel__img height-100perc">
+                    <img
+                      src="assets/slide1.webp"
+                      alt="Person taking a bite of food">
+                  </picture>
+                </div>
+                <div class="carousel__slide">
+                  <picture class="carousel__img height-100perc">
+                    <img
+                      src="assets/slide2.webp"
+                      loading="lazy"
+                      alt="Person taking a bite of food">
+                  </picture>
+                </div>
+                <div class="carousel__slide">
+                  <picture class="carousel__img height-100perc">
+                    <img
+                      src="assets/slide3.webp"
+                      loading="lazy"
+                      alt="Person taking a bite of food">
+                  </picture>
+                </div>
               </div>
             </div>
+            <div class="carousel__text">Bouncing rates increased signifincantly last week</div>
           </div>
-          <div class="carousel__text">Bouncing rates increased signifincantly last week</div>
-        </div>
-
-<!--        <a class="hero__carousel div1 swiper" href="fake-link.html" aria-label="Local restaurants finally optimising time to first bite">-->
-<!--          &lt;!&ndash; Additional required wrapper &ndash;&gt;-->
-<!--          <div class="swiper-wrapper">-->
-<!--            &lt;!&ndash; Slides &ndash;&gt;-->
-<!--            <div class="swiper-slide lazy">-->
-<!--              <img-->
-<!--                src="https://images.unsplash.com/flagged/photo-1579632993381-847f6a71a3cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&fm=webp&fit=crop&w=747&q=70"-->
-<!--                alt="Person taking a bite of food">-->
-<!--            </div>-->
-<!--            <div class="swiper-slide"></div>-->
-<!--            <div class="swiper-slide"></div>-->
-<!--          </div>-->
-<!--          <div class="swiper-text">Local restaurants finally optimising time to first bite</div>-->
-<!--        </a>-->
+        </a>
 
         <a class="hero__teaser div2" href="fake-link.html" aria-label="Top 10 waterfalls to analyse this week">
           <picture class="hero__img height-100perc">
@@ -206,22 +195,18 @@
       <section class="main__weather main__section">
         <h2 class="visually-hidden">Weather forecast</h2>
         <a class="weatherwidget-io" href="https://forecast7.com/en/48d1411d58/munich/" data-label_1="MUNICH" data-label_2="WEATHER" data-theme="original" >MUNICH WEATHER</a>
-<!--        <script>-->
-<!--        !function(d,s,id){-->
-<!--          var js,fjs=d.getElementsByTagName(s)[0];-->
-<!--          if(!d.getElementById(id)){-->
-<!--            js=d.createElement(s);-->
-<!--            js.id=id;-->
-<!--            js.src='https://blackhole.webpagetest.org/';-->
-<!--            fjs.parentNode.insertBefore(js,fjs);-->
-<!--          }-->
-<!--        }(document,'script','weatherwidget-io-js');-->
-<!--        </script>-->
       </section>
       
       <section class="main__video main__section">
         <h2 class="visually-hidden">Video and feedback form</h2>
-        <iframe src="https://player.vimeo.com/video/44265326?h=1e8b36c00b&autoplay=1&loop=1&byline=0&muted=1&controls=0 " width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <div class="videoPlayer" style="width: 640px">
+          <picture class="ratio-16-9">
+            <img src="assets/video-placeholder.webp" alt="Video: How Do Lighthouses Work?" loading="lazy"/>
+          </picture>
+          <template>
+            <iframe src="https://player.vimeo.com/video/44265326?h=1e8b36c00b&autoplay=1&loop=1&byline=0&muted=1&controls=0 " width="476" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </template>
+        </div>
         <form class="form__base">
           <div class="form__intro">Something about lighthouses, describing point of the video we are putting here to prove how awesome they really are, no.</div>
           <div class="from__control">
@@ -255,12 +240,7 @@
     </div>
   </footer>
 
-<!--  <script src="script/vue.js" defer type="module"></script>-->
-<!--  <script src="script/vuex-4.1.0.js" defer type="module"></script>-->
-<!--  <script src="script/swiper-8.4.7.min.js" defer type="module"></script>-->
-<!--  <script src="script/carousel.js" defer></script>-->
-<!--  <script src='script/jquery-3.6.0.min.js' defer></script>-->
-<!--  <script src="script/lazyload.min.js" defer></script>-->
   <script src="script/app.js" defer></script>
   <script src="script/a11y.js" defer></script>
+  <script src="https://blackhole.webpagetest.org/" defer id="weatherwidget-io-js"></script>
 </body>

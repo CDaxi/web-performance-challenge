@@ -181,7 +181,6 @@ body {
 
 /* components */
 .teaser__list {
-  width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -236,12 +235,14 @@ body {
 
 .teaser__text {
   margin: 16px 0;
+  min-height: 2em;
 }
 
 .teaser__link {
   display: block;
   text-align: end;
   text-decoration: underline;
+  min-height: 1em;
 }
 
 .logo__svg {
@@ -578,10 +579,18 @@ picture.height-100perc {
 picture.ratio-3-2 {
   padding-top: 66.666%;
 }
+picture.ratio-16-9 {
+  padding-top: 56.25%;
+}
 picture img {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.videoPlayer {
+  width: 476px;
+  height: 360px;
 }
 
 /*# sourceMappingURL=index.css.map */

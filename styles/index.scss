@@ -57,9 +57,18 @@ picture {
         padding-top: 66.666%;
     }
 
+    &.ratio-16-9 {
+        padding-top: 56.25%;
+    }
+
     img {
         position: absolute;
         left: 0;
         top: 0;
     }
+}
+
+.videoPlayer {
+    width: 476px;
+    height: 360px;
 }

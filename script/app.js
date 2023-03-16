@@ -52,33 +52,34 @@ function acceptCookies() {
   const dayMs = 86400000;
   let expireDate = new Date();
   expireDate.setTime(expireDate.getTime() + (expiryDays * dayMs));
-  document.cookie = document.cookie
-    + (document.cookie ? ';' : '')
-    + `cookiesAccepted=true;expires=${expireDate};path=/`;
+
+  document.cookie = `cookiesAccepted=true; expires=${expireDate}; path=/`;
   if(cookieLayerElement) {
     cookieLayerElement.remove();
   }
   document.body.classList.remove('no-scroll');
 }
 
-const layoutTrashing = (n) => {
-  for (let i = 0; i < n; i++) {
-    const container = document.querySelector('header');
-    console.log(container.clientTop);
-  }
-};
+function videoPlayerInit() {
+  document.querySelectorAll('.videoPlayer').forEach(player => {
+    player.addEventListener('click', () => {
+      const replacementHtml = player.querySelector('template')?.innerHTML;
+      player.innerHTML = replacementHtml || 'ERROR';
+    });
+  });
+}
 
-const JSblocking = () => {
-  let n = 1000000;
-  while (n) { n--;}
+function initAd () {
+  const adSpace = document.querySelector('.main__advertisingContainer');
+  const gif = '<iframe width="500" height="262" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/6wy03z"></iframe>';
+  adSpace.innerHTML = gif;
 }
 
 const initApp = () => {
-  layoutTrashing(20);
   dynamicContent();
-  setTimeout(() => console.log('Hello World!'), 3000);
-  JSblocking();
   cookieLayerInit();
+  setTimeout(videoPlayerInit, 100);
+  setTimeout(initAd, 3000);
 };
 
 initApp();

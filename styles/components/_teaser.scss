@@ -1,5 +1,4 @@
 .teaser__list {
-  width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -54,11 +53,13 @@
 
 .teaser__text {
   margin: 16px 0;
+  min-height: 2em;
 }
 
 .teaser__link {
   display: block;
   text-align: end;
   text-decoration: underline;
+  min-height: 1em;
 }
 
